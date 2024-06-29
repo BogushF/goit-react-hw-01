@@ -1,7 +1,18 @@
-function App() {
-  const [count, setCount] = useState(0);
+import userData from "./userData.json";
+import Profile from "./components/Profile/Profile";
 
-  return <></>;
-}
+const App = () => {
+  return (
+    <div>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+    </div>
+  );
+};
 
 export default App;
